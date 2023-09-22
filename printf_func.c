@@ -12,4 +12,18 @@ int _printf(const char *format, ...)
 {
 	int charcount;
 
+	/* Return -1 to indicate an error for a NULL string */
+
+	if (format == NULL)
+		return (-1);
+
+	/* Link format specifiers to their respective handling functions */
+
+	link symb_link[] = {
+		{"c", char_type},
+		{"s", string_type},
+		{"%", percent_type},
+	};
+
+	return (charcount);
 }
