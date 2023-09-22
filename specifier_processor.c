@@ -4,7 +4,7 @@
  * specifier_processor - Takes the format string as an input and processes it
  * @format: Format string input
  * @symb_link: A struct array containing the format specifiers
- * 		and their respective functions.
+ *		and their respective functions.
  * @argument: Character argument to print
  * Return: The number of characters printed
  */

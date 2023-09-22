@@ -12,6 +12,7 @@
 int _printf(const char *format, ...)
 {
 	int charcount;
+	va_list argument;
 
 	/* Return -1 to indicate an error for a NULL string */
 
@@ -26,5 +27,10 @@ int _printf(const char *format, ...)
 		{"%", percent_type},
 	};
 
+	va_start(argument, format);
+
+	charcount = specifier_processor(format, symb_link, argument);
+
+	va_end(argument);
 	return (charcount);
 }
