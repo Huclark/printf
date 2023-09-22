@@ -41,6 +41,18 @@ int string_type(va_list argument)
 	char *string = va_arg(argument, char *);
 	int charcount = 0;
 
+	if (string == NULL)
+	{
+		while ("(null)"[charcount] != '\0')
+		{
+			_putchar("(null)"[charcount]);
+			charcount++;
+		}
+		return (charcount);
+	}
+
+	charcount = 0;
+
 	while (string[charcount] != '\0')
 	{
 		_putchar(string[charcount]);
