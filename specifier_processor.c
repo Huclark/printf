@@ -15,7 +15,7 @@ int specifier_processor(const char *format, link symb_link[], va_list argument)
 
 	while (format[i] != '\0')
 	{
-		if (format[i] == '\0')
+		if (format[i] == '%')
 		{
 			i++;
 
@@ -35,6 +35,7 @@ int specifier_processor(const char *format, link symb_link[], va_list argument)
 					break;
 				default:
 					charcount += _putchar('%');
+					charcount += _putchar(format[i]);
 					break;
 			}
 		}
