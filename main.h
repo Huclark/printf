@@ -27,5 +27,8 @@ int _printf(const char *format, ...);
 /* Prototype for other supporting functions for _printf function */
 
 int _putchar(char char_to_print);
+int char_type(va_list argument);
+int percent_type(va_list argument);
+int string_type(va_list argument);
 
 #endif
