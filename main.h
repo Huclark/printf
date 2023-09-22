@@ -15,8 +15,8 @@
  */
 struct _link
 {
-	int (*fun)(va_list);
 	char *specifier;
+	int (*fun)(va_list);
 };
 typedef struct _link link;
 

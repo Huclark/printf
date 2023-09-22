@@ -22,7 +22,7 @@ int char_type(va_list argument)
  * Return: 1 as the number of printed characters
  */
 
-int percent_type(va_list argument)
+int percent_type(va_list argument __attribute__((unused)))
 {
 	_putchar('%');
 	return (1);
