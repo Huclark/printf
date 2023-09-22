@@ -17,6 +17,8 @@ int _printf(const char *format, ...)
 		{"c", char_type},
 		{"s", string_type},
 		{"%", percent_type},
+		{"d", int_type},
+		{"i", int_type},
 	};
 
 	int charcount;

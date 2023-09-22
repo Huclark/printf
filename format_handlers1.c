@@ -60,3 +60,27 @@ int string_type(va_list argument)
 	}
 	return (charcount);
 }
+
+/**
+ * int_type - Handles %d and %i format specifiers
+ * @argument: Character argument to print
+ * Return: The total number of characters printed (charcount)
+ */
+
+int int_type(va_list argument)
+{
+	/* Retrieve the integer argument */
+	int num = va_arg(argument, int);
+	/* Convert the integer to a string representation */
+	/* Assuming a maximum of 11 digits for a 32-bit int */
+	char buffer[12];
+	int charcount = sprintf(buffer, "%d", num);
+	int i = 0;
+
+	while (buffer[i] != '\0')
+	{
+		_putchar(buffer[i]);
+		i++;
+	}
+	return (charcount);
+}
