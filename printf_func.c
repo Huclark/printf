@@ -19,6 +19,7 @@ int _printf(const char *format, ...)
 		{"%", percent_type},
 		{"d", int_type},
 		{"i", int_type},
+		{"b", binary_type},
 	};
 
 	int charcount;

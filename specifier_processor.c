@@ -26,7 +26,10 @@ int specifier_processor(const char *format, link symb_link[], va_list argument)
 				charcount += _putchar('%');
 				break;
 			}
-			charcount += process_format_specifier(format[i], symb_link, argument);
+			if (format[i] == 'b')
+				charcount += binary_type(argument);
+			else
+				charcount += process_format_specifier(format[i], symb_link, argument);
 		}
 		else
 			charcount += _putchar(format[i]);
