@@ -36,5 +36,6 @@ int process_format_specifier(char specifier, link symb_link[],
 		va_list argument);
 int int_type(va_list argument);
 int binary_type(va_list argument);
+int convert_binary(unsigned int num);
 
 #endif
