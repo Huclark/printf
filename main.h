@@ -30,6 +30,7 @@ int _putchar(char char_to_print);
 int char_type(va_list argument);
 int percent_type(va_list argument);
 int string_type(va_list argument);
-int specifier_processor(const char *format, link symb_link[], va_list argument);
+int specifier_processor(const char *format, link symb_link[],
+		va_list argument);
 
 #endif
