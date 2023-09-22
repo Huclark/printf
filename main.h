@@ -26,6 +26,7 @@ int _printf(const char *format, ...);
 
 /* Prototype for other supporting functions for _printf function */
 
-int _putchar(char c);
+int _putchar(char char_to_print);
+
 
 #endif
