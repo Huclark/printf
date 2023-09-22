@@ -26,25 +26,30 @@ int specifier_processor(const char *format, link symb_link[], va_list argument)
 				charcount += _putchar('%');
 				break;
 			}
-			charcount += process_format_specifier(format[i], symb_link, argument);
+
+			/* switch between each case and call the appropriate handling functon*/
+			switch (format[i])
+			{
+				case 'c':
+					charcount += symb_link[0].fun(argument);
+					break;
+
+				case 's':
+					charcount += symb_link[1].fun(argument);
+					break;
+
+				case '%':
+					charcount += symb_link[2].fun(argument);
+					break;
+				default:
+					charcount += _putchar('%');
+					charcount += _putchar(format[i]);
+					break;
+			}
 		}
 		else
 			charcount += _putchar(format[i]);
 		i++;
 	}
 	return (charcount);
-}
-
-int process_format_specifier(char specifier, link symb_link[],
-		va_list argument)
-{
-	int index = 0;
-
-	while (symb_link[index].specifier != NULL)
-	{
-		if (specifier == *symb_link[index].specifier)
-			return (symb_link[index].fun(argument));
-		index++;
-	}
-	return (_putchar('%') + _putchar(specifier));
 }

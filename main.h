@@ -32,5 +32,7 @@ int percent_type(va_list argument);
 int string_type(va_list argument);
 int specifier_processor(const char *format, link symb_link[],
 		va_list argument);
+int process_format_specifier(char specifier, link symb_link[],
+		va_list argument);
 
 #endif
