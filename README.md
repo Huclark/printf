@@ -32,7 +32,7 @@ of the standard library function `printf()`.
 
 ### Prerequisites
 
-YOu need a good understanding of the following:
+You need a good understanding of the following:
 
 - [Arrays]
 - [Structures & Typedef]
@@ -40,7 +40,7 @@ YOu need a good understanding of the following:
 - [Function Pointers]
 - [Argv & Argc]
 - [Variadic Functions]
-- [DYnamic Memory Allocation (Malloc)]
+- [Dynamic Memory Allocation (Malloc)]
 
 ### Installation
 
